@@ -1,0 +1,8 @@
+version: '3'
+services:
+  skeletron:
+    container_name: skeletron
+    build:
+      context: .
+    volumes:
+      - .:/opt/skeletron

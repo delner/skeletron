@@ -1,0 +1,11 @@
+.bundle/
+.dockerignore
+.envrc
+.rspec_status
+.ruby-gemset
+.ruby-version
+.rvmrc
+coverage/
+docker*
+Docker*
+spec/reports/
