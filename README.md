@@ -63,7 +63,7 @@ It is **NOT**:
 
   - **An application framework** e.g. like Rails. It does not provide an end-to-end application design solution. Your design decisions are yours to own.
   - **"Opinionated"**: it's here to aid your architecture choices, not constrain.
-  - **A systems design solution**: it's focuses application design, not systems.
+  - **A systems design solution**: focus is on application design, not systems.
 
 ### Quickstart
 
