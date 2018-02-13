@@ -1,10 +1,10 @@
 # Skeletron
 
-Skeletron is library to aid the building of Ruby applications on "use-case-driven" architecture.
+Skeletron is library to aid the building of Ruby applications on Clean architecture.
 
-### What is "use-case-driven" (UCD) architecture?
+### What is Clean architecture?
 
-!["Use-case-driven" architecture](https://github.com/delner/skeletron/raw/master/architecture_diagram.png)
+![Clean architecture](https://github.com/delner/skeletron/raw/master/architecture_diagram.png)
 
 **Robert Martin describes the architecture in his "Architecture: The Lost Years" lecture**:
 
@@ -56,13 +56,14 @@ https://www.youtube.com/watch?v=WpkDN78P884
 
 Skeletron aims to:
 
-  - **Provide modules to aid implemention UCD architecture**: They are optional and composable, so you can implement only what you want.
-  - **Favor simplicity over convention**: In order to promote extensibility and modularity to give the author maximum freedom.
+  - **Provide modules to aid implemention of Clean architecture**: They are optional and composable, so you can implement only what you want or need.
+  - **Favor simplicity over convention**: In order to promote extensibility and modularity, to give the author maximum freedom and control over their application.
 
 It is **NOT**:
 
-  - **An application framework in itself** e.g. Rails; it's an application library.
+  - **An application framework** e.g. like Rails. It does not provide an end-to-end application design solution. Your design decisions are yours to own.
   - **"Opinionated"**: it's here to aid your architecture choices, not constrain.
+  - **A systems design solution**: it's focuses application design, not systems.
 
 ### Quickstart
 
