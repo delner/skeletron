@@ -18,7 +18,7 @@ module Skeletron
 
         def set_attribute_methods!
           generate_attribute_methods.tap do |mod|
-            const_set(:"#{name.split('::').last}AttributeMethods", mod)
+            const_set(:AttributeMethods, mod)
             include(mod)
           end
         end

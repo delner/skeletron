@@ -18,7 +18,7 @@ module Skeletron
 
         def set_association_methods!
           generate_association_methods.tap do |mod|
-            const_set(:"#{name.split('::').last}AssociationMethods", mod)
+            const_set(:AssociationMethods, mod)
             include(mod)
           end
         end

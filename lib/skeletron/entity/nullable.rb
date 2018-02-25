@@ -10,7 +10,7 @@ module Skeletron
         def define_null_object(&block)
           unless defined?(self::Null)
             null_class = generate_null_object_class(&block)
-            const_set(:"Null", null_class.new)
+            const_set(:Null, null_class.new)
           end
         end
 

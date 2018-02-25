@@ -26,14 +26,14 @@ module Skeletron
 
         def set_hash_methods!
           generate_hash_methods.tap do |mod|
-            const_set(:"#{name.split('::').last}HashMethods", mod)
+            const_set(:HashMethods, mod)
             include(mod)
           end
         end
 
         def set_equality_methods!
           generate_equality_methods.tap do |mod|
-            const_set(:"#{name.split('::').last}EqualityMethods", mod)
+            const_set(:EqualityMethods, mod)
             include(mod)
           end
         end
