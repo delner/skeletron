@@ -1,4 +1,5 @@
 require 'skeletron/entity/attributes'
+require 'skeletron/entity/equivalency'
 require 'skeletron/entity/identifiable'
 require 'skeletron/entity/relatable'
 
@@ -7,6 +8,7 @@ module Skeletron
     def self.included(base)
       base.include(Identifiable)
       base.include(Attributes)
+      base.include(Equivalency)
       base.include(Relatable)
     end
   end
