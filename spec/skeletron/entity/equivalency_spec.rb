@@ -58,12 +58,14 @@ RSpec.describe Skeletron::Entity::Equivalency do
               let(:first_object) { test_class.new(foo: 1, bar: 2) }
               let(:second_object) { test_class.new(foo: 1, bar: 2) }
               it { expect(first_object.hash).to eq(second_object.hash) }
+              it { expect(first_object.eql?(second_object)).to be true }
             end
 
             context 'have different attribute values' do
               let(:first_object) { test_class.new(foo: 1, bar: 2) }
               let(:second_object) { test_class.new(foo: 3, bar: 4) }
               it { expect(first_object.hash).to_not eq(second_object.hash) }
+              it { expect(first_object.eql?(second_object)).to be false }
             end
           end
         end
@@ -76,7 +78,6 @@ RSpec.describe Skeletron::Entity::Equivalency do
               let(:first_object) { test_class.new(foo: 1, bar: 2) }
               let(:second_object) { test_class.new(foo: 1, bar: 2) }
               it { expect(first_object).to eq(second_object) }
-              it { expect(first_object.eql?(second_object)).to be true }
               it { expect(first_object == second_object).to be true }
             end
 
@@ -84,7 +85,6 @@ RSpec.describe Skeletron::Entity::Equivalency do
               let(:first_object) { test_class.new(foo: 1, bar: 2) }
               let(:second_object) { test_class.new(foo: 3, bar: 4) }
               it { expect(first_object).to_not eq(second_object) }
-              it { expect(first_object.eql?(second_object)).to be false }
               it { expect(first_object == second_object).to be false }
             end
           end

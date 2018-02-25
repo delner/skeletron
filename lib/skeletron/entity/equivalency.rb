@@ -48,6 +48,10 @@ module Skeletron
                   self.send(attribute)
                 end.hash
               end
+
+              def eql?(o)
+                self.hash == o.hash
+              end
             METHODS
           end
         end
@@ -57,10 +61,6 @@ module Skeletron
 
           Module.new do
             class_eval <<-METHODS, __FILE__, __LINE__ + 1
-              def eql?(o)
-                self == o
-              end
-
               def ==(o)
                 o.class == self.class && #{equality_attributes}.all? do |f|
                   self.send(f) == o.send(f)
