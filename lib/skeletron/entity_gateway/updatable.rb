@@ -4,7 +4,7 @@ module Skeletron
       # Update entity by ID
       # id:         ID of the entity
       # attributes: Hash of attributes to update
-      # Returns:    Entity object.
+      # Returns:    Integer count of entities updated.
       def update(id:, attributes: {})
         raise NotImplementedError.new
       end
@@ -12,7 +12,7 @@ module Skeletron
       # Update all entities which match all attributes
       # by:         Hash of attributes to match
       # with:       Hash of attributes to update
-      # Returns:    Array of entity objects.
+      # Returns:    Integer count of entities updated.
       def update_all(by: {}, with: {})
         raise NotImplementedError.new
       end
