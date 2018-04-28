@@ -3,7 +3,7 @@ module Skeletron
     module Deletable
       # Delete entity by ID
       # id:         ID of the entity
-      # Returns:    true.
+      # Returns:    Integer count of entities deleted.
       def delete(id)
         raise NotImplementedError.new
       end
